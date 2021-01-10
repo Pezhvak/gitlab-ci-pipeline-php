@@ -48,6 +48,7 @@ docker-php-ext-install -j "$(nproc)" imap
 docker-php-ext-install -j "$(nproc)" exif pcntl bcmath bz2 calendar intl mysqli opcache pdo_mysql pdo_pgsql pgsql soap xsl zip gmp
 if [[ $PHP_VERSION == '7.4' || $PHP_VERSION == '7.3' ]]
   docker-php-ext-install -j "$(nproc)" xmlrpc
+fi
 docker-php-source delete
 
 if [[ $PHP_VERSION == "8.0" || $PHP_VERSION == "7.4" ]]; then
