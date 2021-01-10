@@ -46,7 +46,7 @@ docker-php-ext-install -j "$(nproc)" ldap
 PHP_OPENSSL=yes docker-php-ext-configure imap --with-kerberos --with-imap-ssl
 docker-php-ext-install -j "$(nproc)" imap
 docker-php-ext-install -j "$(nproc)" exif pcntl bcmath bz2 calendar intl mysqli opcache pdo_mysql pdo_pgsql pgsql soap xsl zip gmp
-if [[ $PHP_VERSION == '7.4' || $PHP_VERSION == '7.3' ]]
+if [[ $PHP_VERSION == '7.4' || $PHP_VERSION == '7.3' ]]; then
   docker-php-ext-install -j "$(nproc)" xmlrpc
 fi
 docker-php-source delete
