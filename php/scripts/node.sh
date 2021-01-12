@@ -10,3 +10,6 @@ curl -sL https://deb.nodesource.com/setup_15.x | bash - \
     && npm cache clean --force
 
 xargs sudo chmod a+x $HOME/.yarn/bin/yarn
+
+# cloudflare cli
+npm install -g cloudflare-cli
